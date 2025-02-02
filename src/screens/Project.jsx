@@ -28,10 +28,10 @@ const ProjectsPage = () => {
             // width={"400px"}
           />
           <h2 className="text-2xl font-bold my-2 font-medium text-gray-800 dark:text-neutral-200">
-            {project.title}
+            {project?.title}
           </h2>
           <p className="mb-4 text-gray-600 dark:text-neutral-400">
-            {project.description}
+            {project?.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
             {project.technologies.map((tech, i) => (
@@ -44,9 +44,11 @@ const ProjectsPage = () => {
             ))}
           </div>
           <a
-            href={project.link}
+            // href={project.link}
             className="text-green-800 hover:text-green-900 font-semibold dark:text-green-700 dark:hover:text-green-800 focus:outline-none focus:underline"
-            onClick={() => navigate("/project/details", { state: project })}
+            onClick={() =>
+              navigate(`/project/${project?.id}`, { state: project })
+            }
           >
             View Project →
           </a>

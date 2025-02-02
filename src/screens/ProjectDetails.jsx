@@ -1,14 +1,24 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import BackIcon from "../components/BackIcon";
 import Carousel from "../components/Carousel.tsx";
+import { ProjectContext } from "../context/ProjectsContext.js";
+import NotFound from "./NotFound.jsx";
 
 const ProjectDetail = () => {
-  const location = useLocation();
+  const [project, setProject] = useState(null);
+  const navigate = useNavigate();
 
-  const project = location.state;
+  const { id } = useParams();
+  const projects = useContext(ProjectContext);
+
+  useEffect(() => {
+    const project = projects.find((item) => item.id === Number(id));
+    if (!project) navigate("/404");
+    setProject(project);
+  }, []);
 
   return (
     <div className=" ">
@@ -19,7 +29,7 @@ const ProjectDetail = () => {
         </h1>
         <div className="p-6 rounded-lg">
           <div className="space-y-8">
-            {project?.images && <Carousel images={project?.images} />}
+            {project && <Carousel images={project?.images} />}
 
             {/* Project Description */}
             <div>
@@ -37,9 +47,10 @@ const ProjectDetail = () => {
                 Features
               </h2>
               <ul className="list-disc list-inside text-gray-600 dark:text-neutral-400">
-                {project?.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
+                {project &&
+                  project?.features?.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
               </ul>
             </div>
 
@@ -49,14 +60,15 @@ const ProjectDetail = () => {
                 Technologies Used
               </h2>
               <div className="flex flex-wrap gap-2">
-                {project?.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {project &&
+                  project?.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
               </div>
             </div>
 

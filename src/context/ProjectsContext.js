@@ -8,17 +8,14 @@ import Footer from "../components/Footer";
 const ProjectContext = createContext();
 
 const ProjectsProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () =>
-      setTimeout(() => {
-        setLoading(false);
-      }, 1500);
-    window.addEventListener("load", handleLoad);
-
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
+    window.HSStaticMethods.autoInit();
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [loading]);
 
   if (loading)
     return (

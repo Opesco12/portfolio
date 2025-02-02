@@ -44,7 +44,7 @@ function App() {
                   element={<ProjectsPage />}
                 />
                 <Route
-                  path="/project/details"
+                  path="/project/:id"
                   element={<ProjectDetail />}
                 />
 

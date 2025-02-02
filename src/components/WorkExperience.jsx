@@ -45,9 +45,10 @@ const WorkExperience = () => {
             </p>
 
             <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-              Work in Slack is one of the beautiful experience I can do in my
-              entire life. There are a lot of interesting thing to learn and
-              manager respect your time and your personality.
+              At Vargent Africa, I have developed web and mobile applications
+              using React and React Native, collaborating closely with
+              designers, backend developers, and other team members to build
+              high-quality products.
             </p>
           </div>
         </div>
