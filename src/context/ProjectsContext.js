@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const ProjectContext = createContext();
 
 const ProjectsProvider = ({ children }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.HSStaticMethods.autoInit();
