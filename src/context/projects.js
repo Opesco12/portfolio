@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "UTLAM Project",
     description:
-      "An application made for UTL assets management. It is a web application that allows users to manage their assets, track their assets, and generate reports which are services offered by UTLAM. The application is built with React, Tailwind CSS, and Firebase. It also has a backend integration and security features.",
+      "An application built for UTL assets management. It is a web application that allows users to manage their assets, track their assets, and generate reports which are services offered by UTLAM. The application is built with React, Tailwind CSS, and Firebase. It also has a backend integration and security features.",
     features: [
       "Authentication(2FA)",
       "Responsive Design",
@@ -29,31 +29,35 @@ export const projects = [
       "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1738483211/portfolio_qgzj5e.png",
     ],
   },
-  // {
-  //   id: 2,
-  //   title: "1Click by STL Mobile App",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Nullam sit amet nunc nec orci tincidunt ultricies. Sed sit amet accumsan arcu. Nullam sit amet nunc nec orci tincidunt ultricies.",
-  //   features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
-  //   technologies: [
-  //     "React Native",
-  //     "JavaScript",
-  //     "TypeScript",
-  //     "Figma",
-  //     "Rest API",
-  //     "Postman",
-  //     "Expo",
-  //     "EAS",
-  //     "Android",
-  //     "iOS",
-  //     "Firebase",
-  //     "Git",
-  //   ],
-  //   link: "",
-  //   images: [
-  //     "https://picsum.photos/800/600?1",
-  //     "https://picsum.photos/800/600?2",
-  //     "https://picsum.photos/800/600?3",
-  //   ],
-  // },
+  {
+    id: 2,
+    title: "1Click by STL Mobile App",
+    description:
+      "A cross-platform mobile app built for STL Asset Management. It is an application that allows users to manage their assets, track their assets, and generate reports which are services offered by UTLAM. The application is built with React Native leveraging Expo in the managed workflow. It also has a backend integration and other security features.",
+    features: ["Optimized State Management", "Backend Integration", "Authentication(2FA)"],
+    technologies: [
+      "React Native",
+      "JavaScript",
+      "TypeScript",
+      "Figma",
+      "Rest API",
+      "Postman",
+      "Expo",
+      "EAS",
+      "Android",
+      "iOS",
+      "Firebase",
+      "Git",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.stlam.stl&pcampaignid=web_share",
+    images: [
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632310/Screenshot_20250322-091444_v5mddh.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632309/Screenshot_20250322-091452_fj2as7.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632314/Screenshot_20250322-091551_stuhlv.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632309/Screenshot_20250322-091617_vodt3x.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632310/Screenshot_20250322-091625_hitw8v.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632314/Screenshot_20250322-091630_bemkvk.jpg",
+      "https://res.cloudinary.com/dtu6cxvk6/image/upload/v1742632315/Screenshot_20250322-091605_bqsgtn.jpg"
+    ],
+  },
 ];
